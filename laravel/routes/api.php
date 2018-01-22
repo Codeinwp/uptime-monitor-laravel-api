@@ -26,10 +26,10 @@ Route::get('/monitor', function() {
 });
 
 Route::get('/monitor/create', function () {
-	abort(403);
+	abort(404);
 });
 Route::get('/monitor/remove', function () {
-	abort(403);
+	abort(404);
 });
 
 Route::post('/monitor/create', function() {
