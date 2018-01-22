@@ -9,8 +9,8 @@ return [
     'notifications' => [
 
         'notifications' => [
-            \Spatie\UptimeMonitor\Notifications\Notifications\UptimeCheckFailed::class => ['slack'],
-            \Spatie\UptimeMonitor\Notifications\Notifications\UptimeCheckRecovered::class => ['slack'],
+            \Spatie\UptimeMonitor\Notifications\Notifications\UptimeCheckFailed::class => ['mail'],
+            \Spatie\UptimeMonitor\Notifications\Notifications\UptimeCheckRecovered::class => ['mail'],
             \Spatie\UptimeMonitor\Notifications\Notifications\UptimeCheckSucceeded::class => [],
 
             \Spatie\UptimeMonitor\Notifications\Notifications\CertificateCheckFailed::class => ['slack'],
@@ -31,7 +31,7 @@ return [
         'resend_uptime_check_failed_notification_every_minutes' => 60,
 
         'mail' => [
-            'to' => ['your@email.com'],
+            'to' => ['friends@themeisle.com'],
         ],
 
         'slack' => [

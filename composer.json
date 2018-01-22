@@ -1,7 +1,7 @@
 {
-    "name": "spatie/uptime-monitor-app",
-    "description": "A PHP application to monitor uptime and ssl certificates",
-    "keywords": ["uptime", "monitor", "ssl", "certificate", "laravel", "spatie"],
+    "name": "preda-bogdan/uptime-monitor-laravel-api",
+    "description": "Laravel API for Uptime Monitor",
+    "keywords": ["uptime", "monitor", "ssl", "certificate", "laravel"],
     "license": "MIT",
     "type": "project",
     "require": {
