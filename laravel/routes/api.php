@@ -25,6 +25,12 @@ Route::get('/monitor', function() {
 	return Artisan::output();
 });
 
+Route::get('/monitor/create', function () {
+	abort(403);
+});
+Route::get('/monitor/remove', function () {
+	abort(403);
+});
 
 Route::post('/monitor/create', function() {
 	// If the Content-Type and Accept headers are set to 'application/json',
