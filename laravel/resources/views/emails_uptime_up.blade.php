@@ -1,58 +1,50 @@
-@component('mail::message')
-{{-- Greeting --}}
-@if (! empty($greeting))
-# {{ $greeting }}
-@else
-@if ($level == 'error')
-# Whoops!
-@else
-# Hello!
-@endif
-@endif
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Web Page Up</title>
 
-{{-- Intro Lines --}}
-@foreach ($introLines as $line)
-{{ $line }}
+    <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
 
-@endforeach
+    <style>
+        html, body {
+            height: 100%;
+        }
 
-{{-- Action Button --}}
-@isset($actionText)
-<?php
-    switch ($level) {
-        case 'success':
-            $color = 'green';
-            break;
-        case 'error':
-            $color = 'red';
-            break;
-        default:
-            $color = 'blue';
-    }
-?>
-@component('mail::button', ['url' => $actionUrl, 'color' => $color])
-{{ $actionText }}
-@endcomponent
-@endisset
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            color: #B0BEC5;
+            display: table;
+            font-weight: 100;
+            font-family: 'Lato', sans-serif;
+        }
 
-{{-- Outro Lines --}}
-@foreach ($outroLines as $line)
-{{ $line }}
+        .container {
+            text-align: center;
+            display: table-cell;
+            vertical-align: middle;
+        }
 
-@endforeach
+        .content {
+            text-align: center;
+            display: inline-block;
+        }
 
-{{-- Salutation --}}
-@if (! empty($salutation))
-{{ $salutation }}
-@else
-Regards,<br>{{ config('app.name') }}
-@endif
-
-{{-- Subcopy --}}
-@isset($actionText)
-@component('mail::subcopy')
-If you’re having trouble clicking the "{{ $actionText }}" button, copy and paste the URL below
-into your web browser: [{{ $actionUrl }}]({{ $actionUrl }})
-@endcomponent
-@endisset
-@endcomponent
+        .title {
+            font-size: 72px;
+            margin-bottom: 40px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="content">
+        <div class="title">Web Page Up</div>
+        <div class="title"><?php $url ?></div>
+        <div class="title"><?php $email ?></div>
+        <div class="title"><?php $uptime_check_failure_reason ?></div>
+    </div>
+</div>
+</body>
+</html>
