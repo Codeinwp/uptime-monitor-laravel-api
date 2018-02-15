@@ -41,9 +41,9 @@
 <div class="container">
     <div class="content">
         <div class="title">Web Page Down</div>
-        <div class="title"><?php $url ?></div>
-        <div class="title"><?php $email ?></div>
-        <div class="title"><?php $uptime_check_failure_reason ?></div>
+        <div class="title"><?php echo $url ?></div>
+        <div class="title"><?php echo $email ?></div>
+        <div class="title"><?php echo $uptime_check_failure_reason ?></div>
     </div>
 </div>
 </body>
