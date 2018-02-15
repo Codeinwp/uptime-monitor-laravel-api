@@ -21,7 +21,7 @@ Route::get('/monitor', function() {
 	// If the Content-Type and Accept headers are set to 'application/json',
 	// this will return a JSON structure. This will be cleaned up later.
 
-	$exitCode = Artisan::call( "monitor:list", [ '--api' => true ] );
+	$exitCode = Artisan::call( "monitor:status", [ '--api' => true ] );
 	return Artisan::output();
 });
 
