@@ -11,7 +11,7 @@ return [
         'notifications' => [
             \Spatie\UptimeMonitor\Notifications\Notifications\UptimeCheckFailed::class => ['mail'],
             \Spatie\UptimeMonitor\Notifications\Notifications\UptimeCheckRecovered::class => ['mail'],
-            \Spatie\UptimeMonitor\Notifications\Notifications\UptimeCheckSucceeded::class => [],
+            \Spatie\UptimeMonitor\Notifications\Notifications\UptimeCheckSucceeded::class => ['mail'],
 
             \Spatie\UptimeMonitor\Notifications\Notifications\CertificateCheckFailed::class => ['slack'],
             \Spatie\UptimeMonitor\Notifications\Notifications\CertificateExpiresSoon::class => ['slack'],
