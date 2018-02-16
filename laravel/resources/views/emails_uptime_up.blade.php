@@ -41,10 +41,38 @@
 <div class="container">
     <div class="content">
         <div class="title">Web Page Up</div>
-        <div class="title"><?php echo $url; ?></div>
-        <div class="title"><?php echo $email ?></div>
-        <div class="title"><?php echo $uptime_check_failure_reason ?></div>
     </div>
+    {{-- Intro Lines --}}
+    @foreach ($introLines as $line)
+        {{ $line }}
+
+    @endforeach
+
+    {{-- Action Button --}}
+    @isset($actionText)
+		<?php
+		switch ($level) {
+			case 'success':
+				$color = 'green';
+				break;
+			case 'error':
+				$color = 'red';
+				break;
+			default:
+				$color = 'blue';
+		}
+		?>
+        @component('mail::button', ['url' => $actionUrl, 'color' => $color])
+            {{ $actionText }}
+        @endcomponent
+    @endisset
+
+    {{-- Outro Lines --}}
+    @foreach ($outroLines as $line)
+        {{ $line }}
+
+    @endforeach
+
 </div>
 </body>
 </html>
