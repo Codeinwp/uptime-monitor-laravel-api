@@ -397,7 +397,7 @@ OrbitFox will alert you when it is back up.<br>
                             </tr>
                         </tbody></table>
                     </td>
-                </tr>
+                </tr> 
             </tbody></table>
             </td>
     </tr></tbody></table>

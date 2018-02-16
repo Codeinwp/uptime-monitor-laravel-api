@@ -350,7 +350,7 @@
 @endforeach
 <br/> 
 <br/> 
-Have a great day!<br>
+Have a great day!<br> 
 &nbsp;</span></span> 
                                                         </td>
                                                     </tr>
