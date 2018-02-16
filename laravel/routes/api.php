@@ -51,8 +51,7 @@ Route::post('/monitor/remove', function() {
 
 	$url = ( isset( $_POST['url'] ) ) ? $_POST['url'] : '';
 
-	$decoded_url = urldecode ( $url );
-
+	$decoded_url = urldecode ( $url ); 
 	$exitCode = Artisan::call( "monitor:delete", [ 'url' => $decoded_url, '--api' => true ] );
 	return Artisan::output();
 });
