@@ -25,7 +25,7 @@ class Kernel extends ConsoleKernel
     protected function schedule(Schedule $schedule)
     {
         $schedule->command('monitor:check-uptime')->everyMinute();
-        $schedule->command('monitor:check-certificate')->twiceDaily();
+        //$schedule->command('monitor:check-certificate')->twiceDaily();
     }
 
     /**

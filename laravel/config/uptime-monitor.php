@@ -28,7 +28,7 @@ return [
          * To keep reminding you that a site is down, notifications
          * will be resent every given number of minutes.
          */
-        'resend_uptime_check_failed_notification_every_minutes' => 1,
+        'resend_uptime_check_failed_notification_every_minutes' => 60,
 
         //'mail' => [
             //'to' => 'bogdanWK@gmail.com',
@@ -115,7 +115,7 @@ return [
          * when a certificate is found whose expiration date is in
          * the next number of given days.
          */
-        'fire_expiring_soon_event_if_certificate_expires_within_days' => 10,
+        'fire_expiring_soon_event_if_certificate_expires_within_days' => 3,
     ],
 
     /*
