@@ -4,10 +4,20 @@
     "keywords": ["framework", "laravel"],
     "license": "MIT",
     "type": "project",
+    "repositories": [
+        {
+            "url": "https://github.com/Codeinwp/laravel-uptime-monitor.git",
+            "type": "git"
+        }
+    ],
     "require": {
         "php": ">=5.6.4",
         "laravel/framework": "5.5.*",
+<<<<<<< Updated upstream
         "codeinwp/laravel-uptime-monitor": "dev-master",
+=======
+        "codeinwp/laravel-uptime-monitor": "dev-mysql_updates",
+>>>>>>> Stashed changes
         "laravel/tinker": "^1.0"
     },
     "require-dev": {
