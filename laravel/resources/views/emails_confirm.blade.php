@@ -347,7 +347,7 @@
                                                                                 Success, you confirmed this email.<br/>
                                                                                 We will now monitor <?php echo $url; ?> and report to you on this email address.<br/>
 	                                                                        <?php } else { ?>
-                                                                            Confirm E-mail<br/>
+                                                                            Confirm E-mail for <?php echo $url; ?><br/>
                                                                             <a href="https://monitor.orbitfox.com/api/monitor/confirm?token=<?php echo $token; ?>" target="_blank">Click here</a> to confirm your email address and activate the monitor.<br/>
 	                                                                        <?php } ?>
                         &nbsp;                                                   </span></span>
