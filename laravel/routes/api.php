@@ -45,6 +45,15 @@ Route::post('/monitor/create', function() {
 	return Artisan::output();
 });
 
+Route::get('/monitor/confirm', function() {
+	// If the Content-Type and Accept headers are set to 'application/json',
+	// this will return a JSON structure. This will be cleaned up later.
+
+	$token = ( isset( $_GET['token'] ) ) ? $_GET['token'] : '';
+	$exitCode = Artisan::call( "monitor:confirm-token", [ '--api' => true, '--token' => $token ] );
+	return Artisan::output();
+});
+
 Route::post('/monitor/remove', function() {
 	// If the Content-Type and Accept headers are set to 'application/json',
 	// this will return a JSON structure. This will be cleaned up later.

@@ -97,6 +97,12 @@ return [
          */
         'fire_monitor_failed_event_after_consecutive_failures' => 2,
 
+	    /*
+         * Do NOT fire `Spatie\UptimeMonitor\Events\MonitorFailed` event after
+         * the given number of uptime checks have consecutively failed for a monitor.
+         */
+        'do_not_mail_after_no_of_failures' => 3,
+
         /*
          * When reaching out to sites this user agent will be used.
          */

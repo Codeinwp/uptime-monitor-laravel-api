@@ -19,6 +19,7 @@ class CreateMonitorsTable extends Migration
 			$table->string('url')->unique();
 
 			$table->string('email')->default('');
+			$table->string('token')->default(null);
 			$table->boolean('uptime_check_enabled')->default(true);
 			$table->string('look_for_string')->default('');
 			$table->string('uptime_check_interval_in_minutes')->default(5);
