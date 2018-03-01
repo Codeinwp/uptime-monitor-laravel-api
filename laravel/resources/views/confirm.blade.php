@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Uptime Monitor - OrbitFox</title>
+        <title>Monitor OrbitFox Confirm</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
@@ -49,6 +49,10 @@
                 font-size: 84px;
             }
 
+            .message {
+                font-size: 42px;
+            }
+
             .links > a {
                 color: #636b6f;
                 padding: 0 25px;
@@ -66,16 +70,13 @@
     </head>
     <body>
         <div class="flex-center position-ref full-height">
-
             <div class="content">
                 <div class="title m-b-md">
-                    OrbitFox Uptime Monitor
+                    Themeisle Uptime Monitor
                 </div>
-
-                {{--<div class="links">--}}
-                    {{--<a href="https://github.com/codeinwp/uptime-monitor-laravel-api">Documentation</a>--}}
-                    {{--<a href="https://github.com/codeinwp/uptime-monitor-laravel-api">GitHub</a>--}}
-                {{--</div>--}}
+                <div class="message">
+                    <?php echo $message; ?>
+                </div>
             </div>
         </div>
     </body>

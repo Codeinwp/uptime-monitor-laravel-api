@@ -50,8 +50,9 @@ Route::get('/monitor/confirm', function() {
 	// this will return a JSON structure. This will be cleaned up later.
 
 	$token = ( isset( $_GET['token'] ) ) ? $_GET['token'] : '';
+	if( $token === '' ) abort(404);
 	$exitCode = Artisan::call( "monitor:confirm-token", [ '--api' => true, '--token' => $token ] );
-	return Artisan::output();
+	return view('confirm', ['message' => Artisan::output()]);
 });
 
 Route::post('/monitor/remove', function() {
